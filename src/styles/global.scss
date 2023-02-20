@@ -1,0 +1,23 @@
+@import './vars.scss';
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+    font-family: poppins, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, span, a {
+    color: $dark;
+  }
+  
+  button, a {
+    cursor: pointer;
+  }
+
+  fieldset {
+    outline: none;
+    border: 0;
+  }
+
