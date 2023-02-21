@@ -1,0 +1,26 @@
+@import '../../styles/vars.scss';
+
+.footer {
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 96vw;
+    max-width: 1844px;
+    height: 10vh;
+    padding: 0 1.4rem;
+    margin: auto auto 3vh;
+    border-radius: 0.25rem;
+
+    img {
+        background-color: rgba(80, 138, 94, 0.575);
+        width: 3rem;
+    }
+
+    h4 {
+        background-color: rgba(80, 138, 94, 0.603);
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+}

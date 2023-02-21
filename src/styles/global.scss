@@ -8,7 +8,7 @@
     font-family: poppins, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, span, a {
+  h1, h2, h3, h4, h5, h6, span, a, svg {
     color: $dark;
   }
   
@@ -19,5 +19,11 @@
   fieldset {
     outline: none;
     border: 0;
+  }
+
+  .div{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
 
