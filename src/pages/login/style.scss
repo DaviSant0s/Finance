@@ -1,0 +1,12 @@
+.container{
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+    max-width: 1920px;
+
+    margin: 0 auto;
+
+    background: linear-gradient(#DBDCFD, #EEEEEE);
+  }
