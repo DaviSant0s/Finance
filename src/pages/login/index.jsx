@@ -12,31 +12,30 @@ export function Login() {
                     <h4>Organize seu futuro</h4>
                     <p>Tenha acesso às suas</p>
                     <p>finanças em qualquer lugar</p>
-
-                    <form className='login-form'>
-                        <label htmlFor="email">
-                            <span>E-mail </span>
-                            <input type="text" id="email" />
-                        </label>
-
-                        <label htmlFor="password">
-                            <span>Senha </span>
-                            <input type="text" id="password" />
-                        </label>
-
-                        <label htmlFor="password-confirmation">
-                            <span>Confirmação da senha </span>
-                            <input type="text" id="password-confirmation" />
-                        </label>
-
-                        <fieldset>
-                            <button type='subimit'>Cadastrar</button>
-                            <a href="#login">Já possui uma conta? Entre agora!</a>
-                        </fieldset>
-                        
-                    </form>
-
                 </div>
+
+                <form className='login-form'>
+                    <label htmlFor="email">
+                        <span>E-mail </span>
+                        <input type="text" id="email" />
+                    </label>
+
+                    <label htmlFor="password">
+                        <span>Senha </span>
+                        <input type="text" id="password" />
+                    </label>
+
+                    <label htmlFor="password-confirmation">
+                        <span>Confirmação da senha </span>
+                        <input type="text" id="password-confirmation" />
+                    </label>
+
+                    <fieldset>
+                        <button type='subimit'>Cadastrar</button>
+                        <a href="#login">Já possui uma conta? Entre agora!</a>
+                    </fieldset>
+                    
+                </form>
 
             </main>
             <Footer/>

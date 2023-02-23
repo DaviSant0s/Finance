@@ -1,7 +1,6 @@
 @import '../../styles/vars.scss';
 
 .footer {
-    background-color: lightgreen;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,13 +12,13 @@
     margin: auto auto 3vh;
     border-radius: 0.25rem;
 
+    background-color: $white;
+
     img {
-        background-color: rgba(80, 138, 94, 0.575);
         width: 3rem;
     }
 
     h4 {
-        background-color: rgba(80, 138, 94, 0.603);
         font-weight: 400;
         font-size: 1.4rem;
     }

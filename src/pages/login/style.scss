@@ -1,3 +1,5 @@
+@import '../../styles/vars.scss';
+
 .container{
     display: flex;
     flex-direction: column;
@@ -9,4 +11,83 @@
     margin: 0 auto;
 
     background: linear-gradient(#DBDCFD, #EEEEEE);
+  }
+
+  .login-content {
+    background-color: $white;
+    width: 45vw;
+    height: calc(75vh - 1.5rem);
+    max-width: 864px;
+    padding: 1.6rem 5rem;
+    margin: 0.75rem auto;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      h4 {
+        padding-left: 4rem;
+        border-bottom: 2px solid $dark;
+        margin-bottom: 0.25rem;
+
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+
+      p {
+        line-height: 1.4rem;
+      }
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+
+      & + label {
+        margin-top: 0.5rem;
+      }
+
+      input {
+        height: 2.4rem;
+        padding: 0 1rem;
+      }
+    }
+
+    fieldset {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      button {
+        width: 8rem;
+        height: 2.4rem;
+        border: none;
+        border-radius: 0.2rem;
+
+        color: $white;
+        background-color: #43465B;
+        font-weight: 700;
+        font-size: 1rem;
+
+        transition: background 0.25s;
+
+        &:hover {
+          background-color: $dark;
+        }
+
+      }
+
+      a {
+        font-weight: 700;
+      }
+    }
   }
