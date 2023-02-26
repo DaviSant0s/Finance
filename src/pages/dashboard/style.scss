@@ -13,18 +13,6 @@
     background: linear-gradient(#DBDCFD, #EEEEEE);
   }
 
-  /* .dashboard {
-    background-color: white;
-  } */
-
-  /* .table-container {
-    background-color: lightgreen;
-  } */
-
-  .aside-container {
-    background-color: lightsalmon;
-  }
-
   .dashboard {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -67,11 +55,35 @@
         border-bottom: 2px solid$dark;
       }
 
+      table {
+        width: 100%;
+        font-weight: 300;
+        border-collapse: collapse;
+
+        tbody tr{
+          height: 3rem;
+          border-bottom: 0.1px solid $dark;
+
+          td {
+            text-align: left;
+
+            svg {
+              transition: transform 0.05s;
+              &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+              }
+            }
+          }
+        } 
+      }
+
+
       div {
         position: sticky;
         bottom: 0;
         width: 100%;
-        padding: 0.4rem 0 1.2rem;
+        padding: 0.4rem 0 1.4rem;
 
         background-color: $white;
         
@@ -102,6 +114,90 @@
 
           span {
             color: $white;
+          }
+        }
+      }
+    }
+
+    .aside-container {
+      display: flex;
+      flex-direction: column;
+
+      .resume {
+        flex-direction: column;
+        background-color: lightgoldenrodyellow;
+        padding: 0.8rem 1rem;
+        border-radius: 0.25rem;
+
+        h4 {
+          /* background-color: red; */
+          padding: 0.2rem 0;
+          margin: 0 auto;
+          border-bottom: 1px solid $dark;
+          width: 80%;
+          text-align: center;
+        }
+
+        .income-outcome-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+          margin-top: 0.75rem;
+
+          div {
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+
+              .value {
+                padding: 0.4rem 0;
+                border-radius: 0.25rem;
+                font-size: 1.1rem;
+              }
+
+              .income {
+                background-color: #B0f2AF;
+              }
+
+              .outcome {
+                background-color: #f7baad;
+              }
+          }
+
+          
+        }
+      }
+
+      input {
+        height: 2.4rem;
+        padding: 0 1rem;
+        margin: 0.4rem 0;
+        border: 0;
+        border-radius: 0.25rem;
+        outline: 1px solid $dark;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          font-size: 1.4rem;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          & + a {
+            padding-top: 0.05rem;
+          }
+
+          svg {
+            margin-right: 0.4rem;
+            font-size: 1.6rem;
           }
         }
       }

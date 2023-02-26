@@ -192,8 +192,8 @@ export function Dashboard() {
                     </div>
 
                 </div>
-                <div className='aside-container'>
-                    <div>
+                <aside className='aside-container'>
+                    <div className='resume'>
                         <h4>Total do mês atual</h4>
                         <div className='income-outcome-container'>
                             <div>
@@ -211,14 +211,14 @@ export function Dashboard() {
 
                     <input type="text" placeholder='Digite um filtro . . .' />
 
-                    <aside>
-                        <nav>
-                            <a href="#historico"><FiRotateCcw/>Hitórico Geral</a>
-                            <a href="#statistics"><FiBarChart2/>Estatísticas</a>
-                            <a href="#options"><FiList/>Opções</a>
-                        </nav>
-                    </aside>
-                </div>
+                    
+                    <nav>
+                        <a href="#historico"><FiRotateCcw/>Hitórico Geral</a>
+                        <a href="#statistics"><FiBarChart2/>Estatísticas</a>
+                        <a href="#options"><FiList/>Opções</a>
+                    </nav>
+                    
+                </aside>
             </main>
             <Footer/>
         </div>
