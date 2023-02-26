@@ -5,7 +5,7 @@ import './style.scss'
 
 export function Login() {
     return(
-        <div className="container">
+        <div className="login-container">
             <Header/>
             <main className='login-content'>
                 <div className='title'>
