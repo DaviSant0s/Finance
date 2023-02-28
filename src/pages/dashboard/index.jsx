@@ -1,5 +1,6 @@
-import { Header } from '../../components/Header'
-import { Footer } from '../../components/Footer'
+import { Header } from '../../components/Header';
+import { Footer } from '../../components/Footer';
+import { CustomModal } from './Modal';
 
 import {FiTrash, FiPlus, FiRotateCcw, FiBarChart2, FiList } from 'react-icons/fi';
 
@@ -8,6 +9,8 @@ import './style.scss';
 export function Dashboard() {
     return (
         <div className="dash-container">
+            <CustomModal/>
+
             <Header/>
             <main className='dashboard'>
                 <div className='table-container'>
