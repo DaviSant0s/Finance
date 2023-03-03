@@ -6,7 +6,7 @@ import './style.scss'
 export function Login() {
     return(
         <div className="login-container">
-            <Header/>
+            <Header email='Login' name='Cadastre-se'/>
             <main className='login-content'>
                 <div className='title'>
                     <h4>Organize seu futuro</h4>

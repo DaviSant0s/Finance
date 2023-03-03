@@ -61,7 +61,7 @@
         border-collapse: collapse;
 
         tbody tr{
-          height: 3rem;
+          height: 2.8rem;
           border-bottom: 0.1px solid $dark;
 
           td {
@@ -83,6 +83,7 @@
         position: sticky;
         bottom: 0;
         width: 100%;
+        margin-top: auto;
         padding: 0.4rem 0 1.4rem;
 
         background-color: $white;
@@ -125,7 +126,7 @@
 
       .resume {
         flex-direction: column;
-        background-color: lightgoldenrodyellow;
+        background-color: $white;
         padding: 0.8rem 1rem;
         border-radius: 0.25rem;
 

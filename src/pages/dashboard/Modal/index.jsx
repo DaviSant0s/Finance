@@ -5,7 +5,7 @@ import './style.scss';
 
 export function CustomModal() {
     return(
-        <Modal isOpen={true} className="modal" overlayClassName="overlay"> 
+        <Modal isOpen={false} className="modal" overlayClassName="overlay"> 
             <form>
                 <header>
                     <h4>Cadastrar um novo ativo</h4>
@@ -17,7 +17,7 @@ export function CustomModal() {
 
                 <fieldset className='first-fieldset'>
                     <span>Entrada</span>
-                    <input type="range"/>
+                    <input className='green' type="range" min="0" max="1" step="1" defaultValue="0" required/>
                     <span>Saída</span>
                 </fieldset>
 

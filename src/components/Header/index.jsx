@@ -2,7 +2,7 @@ import { FiDollarSign, FiUser } from 'react-icons/fi';
 
 import './styles.scss';
 
-export function Header() {
+export function Header( {name, email} ) {
     return(
       <header className='header'>
         <div className='title'>
@@ -12,8 +12,8 @@ export function Header() {
 
         <div className='user-container'>
           <div className='user-info'>
-            <span>Cadastre-se</span>
-            <span>Login</span>
+            <span>{name}</span>
+            <span>{email}</span>
           </div>
           <FiUser/>
         </div>
