@@ -85,8 +85,33 @@ export function Dashboard() {
     //seData: a função que vai modificar essa lista
 
     const [data, setData] = useState(staticData);
+    const [filteredData, setFilteredData] = useState(staticData);
+    const [filterInputValue, setfilterInputValue] = useState('');
 
     const name = 'olaph@bytejr.com'
+
+    function handleDelete(idToDelete){
+      const newData = data.filter(function(item){
+        return item.id != idToDelete;
+      })
+
+      setData(newData);
+      setFilteredData(newData);
+    }
+
+    function filterTable(value) {
+      const newData = data.filter(function(item){
+        
+        const filterValue = value.toLowerCase();
+        const itemDescription = item.description.toLowerCase();
+
+        return itemDescription.includes(filterValue);
+      })
+
+      setfilterInputValue(value);
+      setFilteredData(newData);
+    }
+
     return (
         <div className="dash-container">
             <CustomModal/>
@@ -99,14 +124,16 @@ export function Dashboard() {
                     <table>
                         <tbody>
                             {
-                                data.map(function(item){
+                                filteredData.map(function(item){
                                     return(
                                         <tr key={item.id}>
                                             <td>{item.income ? 'Entrada': 'Saída'}</td>
                                             <td>R$ {item.value}</td>
                                             <td>{item.description}</td>
                                             <td>{item.date}</td>
-                                            <td><FiTrash/></td>
+                                            <td><FiTrash onClick={() => {
+                                              handleDelete(item.id);
+                                            }}/></td>
                                         </tr>
                                     )
                                 })
@@ -140,7 +167,12 @@ export function Dashboard() {
                         </div>
                     </div>
 
-                    <input type="text" placeholder='Digite um filtro . . .' />
+                    <input 
+                      type="text" 
+                      placeholder='Digite um filtro . . .' 
+                      value={filterInputValue} 
+                      onChange={(event) => {filterTable(event.target.value)}}
+                    />
 
                     
                     <nav>
