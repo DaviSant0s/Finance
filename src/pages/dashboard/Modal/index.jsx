@@ -3,9 +3,9 @@ import {FiPlus, FiXSquare} from 'react-icons/fi';
 
 import './style.scss';
 
-export function CustomModal() {
+export function CustomModal({ isOpen } ){
     return(
-        <Modal isOpen={false} className="modal" overlayClassName="overlay"> 
+        <Modal isOpen={isOpen} className="modal" overlayClassName="overlay"> 
             <form>
                 <header>
                     <h4>Cadastrar um novo ativo</h4>

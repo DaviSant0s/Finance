@@ -88,7 +88,40 @@ export function Dashboard() {
     const [filteredData, setFilteredData] = useState(staticData);
     const [filterInputValue, setfilterInputValue] = useState('');
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const name = 'olaph@bytejr.com'
+
+    const total = calculateTotal();
+
+    function calculateTotal() {
+      /* let income = 0;
+      let outcome = 0;
+
+      for(let item of filteredData){
+        if(item.income){
+          income += item.value;
+        }else{
+          outcome += item.value;
+        }
+      }
+        */
+
+      const total = filteredData.reduce(function(total, item){
+        if(item.income){
+          const income = total.income + item.value
+          const newTotal = {income, outcome: total.outcome};
+          return newTotal;
+        }else{
+          const outcome = total.outcome + item.value
+          const newTotal = {income: total.income, outcome};
+          return newTotal;
+        }
+      }, { income: 0, outcome: 0});
+
+
+      return { income: total.income.toFixed(2), outcome: total.outcome.toFixed(2) }
+    }
 
     function handleDelete(idToDelete){
       const newData = data.filter(function(item){
@@ -97,6 +130,7 @@ export function Dashboard() {
 
       setData(newData);
       setFilteredData(newData);
+      setfilterInputValue('');
     }
 
     function filterTable(value) {
@@ -114,7 +148,7 @@ export function Dashboard() {
 
     return (
         <div className="dash-container">
-            <CustomModal/>
+            <CustomModal isOpen={isModalOpen}/>
 
             <Header email= {name} name='olaph jr.'/>
 
@@ -143,7 +177,7 @@ export function Dashboard() {
 
                     
                     <div>
-                        <button>
+                        <button onClick={() => {setIsModalOpen(true)}}>
                             <FiPlus/>
                             <span>Nova entrada</span>
                         </button>
@@ -156,12 +190,12 @@ export function Dashboard() {
                         <div className='income-outcome-container'>
                             <div>
                                 <span>Entrou</span>
-                                <span className='value income'>R$ 300,00</span>
+                                <span className='value income'>R$ {total.income}</span>
                             </div>
 
                             <div>
                                 <span>Saiu</span>
-                                <span className='value outcome'>R$ 100,00</span>
+                                <span className='value outcome'>R$ {total.outcome}</span>
                             </div>
                             
                         </div>
