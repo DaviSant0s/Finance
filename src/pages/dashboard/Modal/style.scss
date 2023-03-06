@@ -110,14 +110,14 @@
                     height: 1.6rem;
                     border-radius: 1rem;
                     padding: 0 0.25rem;
-                    background-color: #E99696;
+                    background-color: hsla(357, 79%, 44%, 0.643);
 
                     cursor: pointer;
                     transition: background 0.2s;
                 }
 
                 &.green::-webkit-slider-runnable-track {
-                    background: #43465B;
+                    background: hsla(118, 79%, 44%, 0.643);
                 }
 
                 &:hover::-webkit-slider-runnable-track {

@@ -94,7 +94,7 @@ export function Dashboard() {
 
     const total = calculateTotal();
 
-    function calculateTotal() {
+    function calculateTotal(){
       /* let income = 0;
       let outcome = 0;
 
@@ -133,7 +133,7 @@ export function Dashboard() {
       setfilterInputValue('');
     }
 
-    function filterTable(value) {
+    function filterTable(value){
       const newData = data.filter(function(item){
         
         const filterValue = value.toLowerCase();
@@ -146,9 +146,20 @@ export function Dashboard() {
       setFilteredData(newData);
     }
 
+    function handleAddData(newRegister){
+      let newData = data;
+      newData.push(newRegister);
+      setData(newData);
+      setFilteredData(newData);
+    }
+
     return (
         <div className="dash-container">
-            <CustomModal isOpen={isModalOpen}/>
+            <CustomModal 
+            isOpen={isModalOpen} 
+            action={handleAddData}
+            openModal = {setIsModalOpen}
+            />
 
             <Header email= {name} name='olaph jr.'/>
 
