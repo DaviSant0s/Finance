@@ -74,6 +74,15 @@
                 transform: scale(1.1);
               }
             }
+
+            &.green{
+              text-shadow: 0 3px 3px #55EE55;
+              
+            }
+
+            &.red{
+              text-shadow: 0 3px 3px #EE5555; 
+            }
           }
         } 
       }

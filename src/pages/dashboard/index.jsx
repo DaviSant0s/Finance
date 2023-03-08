@@ -172,11 +172,17 @@ export function Dashboard() {
                                 filteredData.map(function(item){
                                     return(
                                         <tr key={item.id}>
-                                            <td>{item.income ? 'Entrada': 'Saída'}</td>
-                                            <td>R$ {item.value}</td>
-                                            <td>{item.description}</td>
-                                            <td>{item.date}</td>
-                                            <td><FiTrash onClick={() => {
+                                            <td 
+                                              className={item.income ? 'green': 'red'}
+                                              style={{ width: '15%' }}
+                                            > 
+                                              {item.income ? 'Entrada': 'Saída'}j  
+                                            </td>
+
+                                            <td style={{ width: '20%' }} >R$ {item.value}</td>
+                                            <td style={{ width: '32.5%'}} className='desc' >{item.description}</td>
+                                            <td style={{ width: '25%' }} >{item.date}</td>
+                                            <td style={{ width: '7.5%' }} ><FiTrash onClick={() => {
                                               handleDelete(item.id);
                                             }}/></td>
                                         </tr>
